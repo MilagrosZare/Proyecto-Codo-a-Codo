@@ -1,0 +1,263 @@
+/* ****** BREAKPOINTS ****** */
+
+/* ****** DESKTOP ****** */
+@media (min-width:1024px)
+{
+    .section .container {
+        padding-top: 70px;
+    }
+    .header-nav {
+        left: 0;
+        display: inline;
+        justify-content: space-between;
+    }
+    .header-nav.open {
+        left: 0;
+    }
+    .section {
+        left: 0;
+    }
+    .section.open {
+        left: 0;
+    }
+    .home-img::after {
+        right: 0px;
+        bottom: -25px;
+    }
+    .home-img::before {
+        left: 0px;
+        top: -25px;
+    }
+    .about .about-content .personal-info .info-item p span {
+        display: block;
+        margin-left: 0;
+    }
+    .footer .copyright {
+        margin-left: 120px;
+    }
+}
+
+/* ****** TABLET ****** */
+@media (min-width: 365px) and (max-width: 1138px)
+{
+    .home .home-info 
+    .home .home-img
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .header-nav .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    
+    .home-img::before {
+        left: 0;
+        top: 0;
+    }
+    .home-img::after {
+        right: 40px;
+        bottom: 40px;
+    }
+
+    .home .home-img img {
+        position: absolute;
+        left: 5%;
+        top:5%;
+        height: 80%;
+    }
+
+
+/*     ****** LOGO ****** */
+    .header-nav .logo a  {
+        font-size: 35px;
+    }
+
+    .header-nav .logo a span {
+        font-size: 35px;
+    }
+/* ****** FIN DEL LOGO ****** */
+
+    .header-nav .nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: -60vh;
+        margin: 0;
+        padding: 0;
+        display: none;
+        margin-top: 100px;
+        margin-right: 80px;
+        opacity: 0;
+    }
+
+    .header-nav .nav li {
+        width: 100%;
+        text-align: center;
+        padding: 7px;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .header-nav .nav.active {
+        display: flex;
+        animation:showMenu 350ms ease-in-out
+        both;
+    }
+
+    @keyframes showMenu 
+    {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+
+    .br-1.animated {
+        transform: rotate(-45deg) translate(-12px, 1px);
+    }
+
+    .br-2.animated {
+        opacity:0;
+    }
+
+    .br-3.animated {
+        transform: rotate(45deg) translate(-12px, -1px);
+    }
+
+    .footer .nav {
+        margin: 0 0 0 27%;
+    }
+
+    .footer .copyright {
+        display: inline;
+        left: 0;
+        bottom: 0;
+        margin: 3% 0 0 25%;
+    }
+
+    .footer .leyenda_footer {
+        display: inline;
+        left: 0;
+        bottom: 0;
+    } 
+
+}
+
+/* ****** MOBILE ****** */
+@media (max-width:364px)
+{
+    .contact .contact.form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experiencia,
+    .about .about-content .educacion,
+    .about .about-content .skill,
+    .about .about-content .personal-info
+    .footer .nav {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-info {
+        flex: 0 0 50%;
+        max-width: 50%;
+        
+    }
+
+    .home .home-img {
+        flex: 0 0 50%;
+        max-width: 50%;  
+    }
+
+    .home .home-img img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .header-nav .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+/*  ****** LOGO ****** */
+    .header-nav .logo a  {
+        font-size: 30px;
+    }
+
+    .header-nav .logo a span {
+        font-size: 30px;
+    }
+
+    .header-nav .nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: -60vh;
+        margin: 0;
+        padding: 0;
+        display: none;
+        margin-top: 100px;
+        margin-right: 80px;
+        opacity: 0;
+
+    }
+
+    .header-nav .nav li {
+        width: 100%;
+        text-align: center;
+        padding: 7px;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    @keyframes showMenu 
+    {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .header-nav .nav.active {
+        display: flex;
+        animation:showMenu 350ms ease-in-out
+        both;
+    }
+
+    .br-1.animated {
+        transform: rotate(-45deg) translate(-12px, 1px);
+    }
+
+    .br-2.animated {
+        opacity:0;
+    }
+
+    .br-3.animated {
+        transform: rotate(45deg) translate(-12px, -1px);
+    }
+
+    .footer .nav {
+        margin: 0 0 0 27%;
+    }
+
+    .footer .copyright {
+        display: inline;
+        left: 0;
+        bottom: 0;
+        margin: 3% 0 0 25%;
+    }
+
+    .footer .leyenda_footer {
+        display: inline;
+        left: 0;
+        bottom: 0;
+    } 
+
+}
