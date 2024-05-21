@@ -270,7 +270,7 @@ ul {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
-    color: white;
+    color: #ffffff;
     border-radius: 40px;
     display: inline-block;
     white-space: nowrap;
@@ -839,7 +839,7 @@ h2.my-profession {
 
 /* ****** FOOTER ******  */
 
-.footer{
+.footer {
     width: 100%;
     background: var(--bg-black-100);
     position: fixed;
@@ -855,40 +855,42 @@ h2.my-profession {
     transition: all 0.3 ease;
 }
 
-.footer .nav{
+.footer .nav {
     position: absolute;
     top: 10px;
-    left: 100px;
+    left: 10px;
 }
 
-.footer .nav li{
+.footer .nav li {
     display: inline-block; 
 }
-.footer .nav li a
-{
+
+.footer .nav li a {
     font-size: 20px;
     display: inline-block;
     padding: 5px 15px;
     position: relative;
 }
-.footer .nav li a.active
-{
+
+.footer .nav li a.active {
     color: var(--skin-color);
 }
-.footer .nav li a i
-{
+
+.footer .nav li a i {
     margin-right: 15px;
 }
-.footer .nav li a i:hover
-{
+
+.footer .nav li a i:hover {
     transform: scale(1.5);
 }
-.footer .copyright{
+
+.footer .copyright {
     font-size: 12px;
     color: var(--text-black-900);
 }
-.footer .leyenda_footer
-{
+
+.footer .leyenda_footer {
     color: var(--skin-color);
 }
+
 /* ****** END FOOTER SECTION ******  */

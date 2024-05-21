@@ -8,14 +8,23 @@
     }
     .header-nav {
         left: 0;
-        display: inline-block;
+        display: flex;
         justify-content: flex-end;
     }
 
+/*     .header-nav .nav li {
+        text-align: end; 
+    } */
+
     .header-nav .nav li a {
         width: 80%;
-        text-align: end;
+        text-align: center;
         font-size: 15px;
+    }
+
+    .header-nav .nav li a i {
+        padding: 0 0 0 10px;
+        text-align: center;
     }
 
     .header-nav.open {
@@ -45,7 +54,7 @@
 }
 
 /* ****** TABLET ****** */
-@media (min-width: 365px) and (max-width: 1022px)
+@media (min-width: 321px) and (max-width: 1022px)
 {
     .home .home-info 
     .home .home-img
@@ -80,7 +89,6 @@
         height: 80%;
     }
 
-
 /*     ****** LOGO ****** */
     .header-nav .logo a  {
         font-size: 35px;
@@ -95,26 +103,31 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin: 0;
+        margin: 50px 0 0 0;
         padding: 0;
+        margin-left: 0;
         display: none;
-        background-color: var(--bg-black-10);
+        background-color: var(--bg-black-100);
         opacity: 0;
     }
 
     .header-nav .nav li {
-        width: 70%;
+        width: 100%;
         position: relative;
         text-align: center;
         padding: 7px;
         margin: 10px 0;
         font-size: 24px;
+        background-color: var(--bg-black-100);
     }
 
     .header-nav .nav.active {
         display: flex;
         animation:showMenu 350ms ease-in-out
         both;
+        background-color: var(--bg-black-100);
+        justify-content: center;
+        align-items: center;
     }
 
     @keyframes showMenu 
@@ -136,27 +149,32 @@
         transform: rotate(45deg) translate(-12px, -1px);
     }
 
-    .footer .nav {
-        margin: 0 0 0 27%;
+    .footer {
+        display: block;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 0 0 100%;
+        max-width: 100%; 
     }
-
+    
+    .footer .nav {
+        left: 5%;
+    }
     .footer .copyright {
-        display: inline;
-        left: 0;
-        bottom: 0;
-        margin: 3% 0 0 25%;
+        right: 10%;
+        top: 35%;
+        position: absolute;
+        display: none;
     }
 
     .footer .leyenda_footer {
-        display: inline;
-        left: 0;
-        bottom: 0;
-    } 
+        display: none;
+    }  
 
 }
 
 /* ****** MOBILE ****** */
-@media (max-width:364px)
+@media (max-width:320px)
 {
     .contact .contact.form .col-6,
     .contact .contact-info-item,
@@ -207,26 +225,34 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin: 0;
+        margin: 50px 0 0 0;
         padding: 0;
+        margin-left: 0;
         display: none;
-        margin-right: 80px;
         background-color: var(--bg-black-10);
         opacity: 0;
     }
 
     .header-nav .nav li {
         width: 100%;
+        position: relative;
         text-align: center;
         padding: 7px;
         margin: 10px 0;
-        font-size: 24px;
+        font-size: 12px;
+        background-color: var(--bg-black-100);
     }
 
-    .header-nav .nav.active {
+
+    .header-nav .nav .active {
         display: flex;
         animation:showMenu 350ms ease-in-out
         both;
+        background-color: var(--bg-black-100);
+        width: 100vw;
+        right: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     @keyframes showMenu 
@@ -247,21 +273,59 @@
         transform: rotate(45deg) translate(-12px, -1px);
     }
 
-    .footer .nav {
-        margin: 0 0 0 27%;
+    /* ****** FOOTER ****** */
+
+/*     .footer ul.nav {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .footer .copyright {
-        display: inline;
+    .footer .copyright small {
+        display: flex;
+        margin: auto;
+        font-size: 5px;
         left: 0;
         bottom: 0;
-        margin: 3% 0 0 25%;
     }
 
     .footer .leyenda_footer {
-        display: inline;
-        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         bottom: 0;
-    } 
+    }   */
+
+    .footer {
+        padding: 30px;
+        width: 100%;
+        max-height: 20vh;
+    }
+
+    .footer .copyright small {
+        display: none;
+
+    }
+
+    .footer .leyenda_footer {
+        display: none; 
+        
+    }
+
+    .footer nav ul.nav {
+        list-style: none;
+        padding: 0;
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        margin-left: 75px;
+    }
+    
+    .footer .nav li a.active {
+        display: inline;
+        align-items: center;
+        padding: 0;
+    }
 
 }
