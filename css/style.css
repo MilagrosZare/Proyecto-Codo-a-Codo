@@ -745,6 +745,7 @@ h2.my-profession {
 /* ****** END PORTFOLIO SECTION ******  */
 
 /* ****** CONTACT SECTION ******  */
+
 .contact-title
 {
     color: var(--skin-color);
@@ -757,7 +758,8 @@ h2.my-profession {
     color: var(--text-black-900);
     text-align: center;
     font-size: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 .contact .contact-info-item
 {
@@ -790,49 +792,199 @@ h2.my-profession {
     color: var(--text-black-700);
     font-weight: 400;
 }
-.contact .contact-form
+.contact .contact-form 
 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.contact .contact-form .col-6
-{
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin: auto; 
 }
 .contact .contact-form .col-12
 {
     flex: 0 0 100%;
     max-width: 100%;
 }
+.contact .contact-form label
+{
+    margin: 7px 0 7px 30px;
+    color: var(--text-black-900);
+}
 .contact .contact-form .form-item
 {
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
-.contact .contact-form .form-item .form-control
+.form-group{
+    width: 100%; 
+}
+.form-group input,
+.form-group select,
+.form-group .comunicacion
 {
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    background: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
-    padding: 10px 25px;
+    border: none;
+    background-color: var(--bg-black-50);
+    font-family: inherit;
     font-size: 16px;
-    color: var(--text-black-700);
-    transition: all 0.3s ease;
+    padding: 10px 25px;
+    width: 100%; 
+    height: 40px;  
+    border-radius: 25px;
+    margin: 0 ;
+    color: var(--text-black-900);
 }
-.contact .contact-form .form-item .form-control .form-control:focus
+.form-group input:focus,
+.form-group select:focus,
+.form-group .comunicacion:focus
 {
+    width: 100%;   
+    background: var(--bg-black-100);
+    outline: none;
+    box-shadow: 0 0 20px rgba(48, 46,77, 0.15);
+    color: var(--text-black-900);
+}
+::placeholder { 
+    color: var(--text-black-900);
+    opacity: 1; 
+}
+.form-group textarea
+{
+    border: none;
+    background-color: var(--bg-black-50);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px 25px;
+    width: 100%; 
+    height: 140px;  
+    border-radius: 25px;
+    margin: 0 ;
+}
+.form-group textarea:focus
+{
+    width: 100%;   
+    background: var(--bg-black-100);
+    outline: none;
     box-shadow: 0 0 20px rgba(48, 46,77, 0.15);
 }
-.contact .contact-form .form-item textarea.form-control
+.form-group input[type="checkbox"]
 {
-    height: 140px;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 5px;
 }
-.contact .contact-form .btn
+/*Estilos para Validacion*/
+.form-group-correcto input 
 {
-    height: 50px;
-    padding: 0 50px;
+	border: 2px solid transparent;
+	opacity: 1;
+}
+.form-group-incorrecto input 
+{
+	border: 2px solid var(--skin-color);
+    opacity: 1;
+}
+/*Agregar imagen*/
+.form-file {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10px;
+	margin-bottom: 10px;
+}
+.form-file__action
+{
+	width: 100%;
+}
+.form-file__action label 
+{
+	display: block;
+}
+.form-file__action label.title 
+{
+	width: 100%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.form-file__action input 
+{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	display: none;
+}
+.form-file__result 
+{
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 250px;
+    background: var(--bg-black-50);
+    border: 2px dashed var(--bg-black-100);
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+.form-file__result::after 
+{
+	content: 'Click para elegir imagen.';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: var(--text-black-900);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-file__result img 
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 50;
+}
+.form-file__result--active
+{
+	background-color: var(--bg-black-100);
+}
+/*Mensajes validaciones*/
+.formulario__input-error
+{
+	font-size: 12px;
+	margin: 7px 15px ;
+	display: none;
+}
+.formulario__input-error-activo
+{
+	display: block;
+}
+.formulario__mensaje 
+{
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+.formulario__mensaje-activo 
+{
+	display: block;
+}
+.formulario__mensaje-exito 
+{
+    font-size: 18px;
+    color: #bb2929;
+    display: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.formulario__mensaje-exito-activo 
+{
+	display: block;
 }
 
 /* ****** END CONTACT SECTION ******  */
