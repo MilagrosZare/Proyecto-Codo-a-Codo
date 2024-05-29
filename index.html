@@ -436,88 +436,141 @@
                             <h2>Contacto</h2>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15">¿Tenés alguna pregunta?</h3>
-                    <h4 class="contact-sub-title padd-15"> Estoy a tu servicio. </h4>
+                    <h3 class="contact-title padd-15">Tiene alguna pregunta?</h3>
+                    <h4 class="contact-sub-title padd-15">Estoy a tu servicio</h4>
                     <div class="row">
-                        <!-- ====== CONTACT INFO ITEM START ===== -->
+                    <!-- ====== CONTACT INFO ITEM START ===== -->
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>¡Llamame!</h4>
+                            <h4>Llamame!</h4>
                             <p>1161658382</p>
                         </div>
-                        <!-- ====== CONTACT INFO ITEM END ===== -->
-                        <!-- ====== CONTACT INFO ITEM START ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <h4>Oficina</h4>
-                            <p>Buenos Aires</p>
+                    <!-- ====== CONTACT INFO ITEM END ===== -->
+                    <!-- ====== CONTACT INFO ITEM START ===== -->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                        <h4>Oficina</h4>
+                        <p>Buenos Aires</p>
                         </div>
                         <!-- ====== CONTACT INFO ITEM END ===== -->
                         <!-- ====== CONTACT INFO ITEM START ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p>info@gmail.com</p>
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>info@gmail.com</p>
                         </div>
                         <!-- ====== CONTACT INFO ITEM END ===== -->
                         <!-- ====== CONTACT INFO ITEM START ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                            <h4>Website</h4>
-                            <p>www.domain.com</p>
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                        <h4>Website</h4>
+                        <p>www.domain.com</p>
                         </div>
                         <!-- ====== CONTACT INFO ITEM END ===== -->
                     </div>
                     <h3 class="contact-title padd-15">ENVIAR UN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">SIEMPRE CONTESTO</h4>
+                    <h4 class="contact-sub-title padd-15">SIEMPRE CONTESTO</h4>        
                     <!-- ====== FORMULARIO DE CONTACTO ===== -->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <form action="https://formsubmit.co/rosana.19abril@gmail.com" method="POST">
-                                <div class="row">
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="nombre" placeholder="Name"
-                                                required data-tipo="nombre">
-
-                                        </div>
+                        <form action="" id="formulario" autocomplete="off">
+                            <div class="row" id="campo_nombre">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" name="nombre" id="nombre">   
                                     </div>
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" required
-                                                placeholder="email@dominio.com" required data-tipo="email">
-
+                                    <p class="formulario__input-error">El nombre lleva letras y espacios, puede llevar acentos.</p>
+                                </div>
+                            </div>
+                            <div class="row" id="campo_email">
+                                <label for="email">Correo Electrónico</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" autocomplete="off" placeholder="email@dominio.com">
+                                    </div>
+                                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                                </div>
+                            </div>
+                            <div class="row" id="campo_telefono">
+                                <label for="telefono">Teléfono</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="tel" name="telefono" id="telefono" placeholder="(XXX)-XXXXXXX">
+                                    </div>
+                                    <p class="formulario__input-error">El teléfono solo puede contener números y el máximo son 10 dígitos.</p>
+                                </div>
+                            </div>
+                            <div class="row" id="campo_asunto">
+                                <label for="asunto">Asunto</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" name="asunto" id="asunto">
+                                    </div>
+                                    <p class="formulario__input-error">Campo vacío.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="mensaje">Mensaje</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="message" id="mensaje" required></textarea>
+                                    </div>
+                                    <p class="formulario__input-error">Campo vacío.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="mensaje">Servicios a contratar</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <select name="servicios" id="servicios">
+                                            <option value="Elegir" class="option">---Seleccionar opción---</option>
+                                            <option value="Web Designer" class="option">Web Designer</option>
+                                            <option value="Web Designer" class="option">Web Developer</option>
+                                            <option value="Graphic Designer" class="option">Graphic Designer</option>
+                                            <option value="Youtuber" class="option">Youtuber</option> 
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="mensaje">¿Cómo desea que nos comuniquemos?</label>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <div class="comunicacion">
+                                            <label class="check" for="option-a">Correo Electrónico</label>
+                                            <input type="checkbox" name="correo" id="option-a" value="Correo">
+                                            <label class="check" for="option-b">Llamada telefónica</label>
+                                            <input type="checkbox" name="llamada" id="option-b" value="Llamada">
+                                            <label class="check" for="option-c">WhatsApp</label>
+                                            <input type="checkbox" name="whatsapp" id="option-c" value="WhatsApp">
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-file">
+                                        <div class="form-file__action">
+                                            <h4 class="contact-sub-title padd-15">¿Deseas subir una imagen con los requerimientos para el puesto?</h4>
+                                            <input type="file" name="image" class="input" id="image" />
+                                        </div>
+                                        <div class="form-file__result" id="result-image">
+                                            <img id="img-result" alt="" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject"
-                                                placeholder="Subject">
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="formulario__mensaje" id="formulario__mensaje">
+                                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <button type="submit" class="btn">Enviar mensaje</button>
+                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Gracias por comunicarte! Te contactaré a la brevedad.</p>
                                 </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" id="" placeholder="Message"
-                                                required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <button type="submit" class="btn">Enviar mensaje</button>
-
-                                    </div>
-                                </div>
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contact">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_autoresponse"
-                                    value="Gracias por comunicarte! Te contactaré a la brevedad.">
-                            </form>
-
+                            </div>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -587,7 +640,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
-    <script type="module" defer src="js/script-validaciones.js"></script>
 </body>
 
 </html>
