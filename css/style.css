@@ -345,7 +345,7 @@ h2.my-profession {
 
 .home .home-img img
 {
-    margin: auto;
+    margin-left: auto;
     border-radius: 5px;
     height: 350px;
     border: 0.5rem solid var(--skin-color);
@@ -1041,6 +1041,7 @@ h2.my-profession {
 .footer .copyright {
     font-size: 12px;
     color: var(--text-black-900);
+    justify-self: flex-end;
 }
 
 .footer .leyenda_footer {
