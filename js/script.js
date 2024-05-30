@@ -39,9 +39,9 @@ const nav = document.querySelector(".nav"),
 function removeBackSection()
 {
     for(let i=0; i<totalSection; i++)
-         {
+        {
             allSection[i].classList.remove("back-section");
-         }
+        }
 }
 function addBackSection(num)
 {
@@ -86,7 +86,7 @@ navTogglerBtn.addEventListener("click", () =>
   header.classList.toggle("active");
   barras.forEach(child =>
   {
-    child.classList.toggle("animated");
+    child.classList. toggle("animated");
   });
 });
 
