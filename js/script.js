@@ -32,7 +32,7 @@ const nav = document.querySelector(".nav"),
 			showSection(this);
 			if(window.innerWidth < 1200)
 			{
-				headerSectionTogglerBtn();
+				var headerSectionTogglerBtn = document.getElementById('header-section-toggler-btn');
 		    }
         })
     }
@@ -83,11 +83,11 @@ const barras = document.querySelectorAll(".ham span");
 
 navTogglerBtn.addEventListener("click", () =>
 {
-  header.classList.toggle("active");
-  barras.forEach(child =>
-  {
-    child.classList. toggle("animated");
-  });
+    header.classList.toggle("active");
+    barras.forEach(child =>
+    {
+    child.classList.toggle("animated");
+    });
 });
 
 /* =================== CONTACT ============================= */
