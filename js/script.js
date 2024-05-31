@@ -28,20 +28,21 @@ const nav = document.querySelector(".nav"),
                     }
                     navList[j].querySelector("a").classList.remove("active");
                 }
+                
 			this.classList.add("active")
 			showSection(this);
 			if(window.innerWidth < 1200)
 			{
-				headerSectionTogglerBtn();
-		    }
+                var headerSectionTogglerBtn = document.querySelector('#header-section-toggler-btn')
+            }  
         })
     }
 function removeBackSection()
 {
     for(let i=0; i<totalSection; i++)
-         {
+        {
             allSection[i].classList.remove("back-section");
-         }
+        }
 }
 function addBackSection(num)
 {
@@ -81,13 +82,14 @@ const navTogglerBtn = document.querySelector(".ham"),
 header = document.querySelector(".nav");
 const barras = document.querySelectorAll(".ham span");
 
-navTogglerBtn.addEventListener("click", () =>
+headerSectionTogglerBtn.addEventListener("click", () =>
 {
-  header.classList.toggle("active");
-  barras.forEach(child =>
-  {
+    header.classList.toggle("active");
+/*     console.log(navTogglerBtn); */ //Bandera para asegurarse si funciona o no el botón. 
+    barras.forEach(child =>   
+    {
     child.classList.toggle("animated");
-  });
+    });
 });
 
 /* =================== CONTACT ============================= */
@@ -146,7 +148,7 @@ const validarCampo = (expresion, input, campo) => {
     let selectServicios = document.getElementById('servicios')
     let valueTexto = selectServicios.options[selectServicios.selectedIndex].value
     //console.log(valueTexto)
-         
+
     //obtener valor checkbox
     let checkboxes = {}
     document.querySelectorAll('[type="checkbox"]').forEach(item => {
