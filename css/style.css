@@ -626,7 +626,7 @@ h2.my-profession {
 /* ****** PORTFOLIO SECTION ******  */
 
 /* TITULO */
-.porfolio-title{
+.portfolio-title{
     font-size: 24px;
     margin-top: 65px;
     margin-left: 180px;
@@ -636,7 +636,7 @@ h2.my-profession {
     position: relative;
 }
 /* DECORACIÓN DEL TÍTULO */
-.porfolio-title::after {
+.portfolio-title::after {
     height: 4px;
     width: 70%;
     background-color: var(--skin-color);
@@ -648,8 +648,11 @@ h2.my-profession {
     max-width: 1090px;
     
 }
+.portfolio-heading{
+    color: var(--text-black-900);
+}
 /* DESCRIPCIÓN - PÁRRAFO */
-.porfolio-description {
+.portfolio-description {
     margin-top: 30px; 
     font-size: 20px;
     color: var(--text-black-900);
@@ -672,8 +675,7 @@ h2.my-profession {
     cursor: pointer;
     border-radius: var(--radius);
     overflow: hidden;
-    border-color: var(--container-color);
-    border: solid;
+    border: solid var(--skin-color);
 }
 
 .portfolio__item::after,
@@ -688,7 +690,6 @@ h2.my-profession {
     background: linear-gradient(180deg, transparent, var(--skin-color));
     position: absolute;
     opacity: 0;
-
 }
 
 .portfolio__img {

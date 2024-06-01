@@ -28,21 +28,20 @@ const nav = document.querySelector(".nav"),
                     }
                     navList[j].querySelector("a").classList.remove("active");
                 }
-                
 			this.classList.add("active")
 			showSection(this);
 			if(window.innerWidth < 1200)
 			{
-                var headerSectionTogglerBtn = document.querySelector('#header-section-toggler-btn')
-            }  
+				headerSectionTogglerBtn();
+		    }
         })
     }
 function removeBackSection()
 {
     for(let i=0; i<totalSection; i++)
-        {
+         {
             allSection[i].classList.remove("back-section");
-        }
+         }
 }
 function addBackSection(num)
 {
@@ -82,15 +81,18 @@ const navTogglerBtn = document.querySelector(".ham"),
 header = document.querySelector(".nav");
 const barras = document.querySelectorAll(".ham span");
 
-headerSectionTogglerBtn.addEventListener("click", () =>
-{
-    header.classList.toggle("active");
-/*     console.log(navTogglerBtn); */ //Bandera para asegurarse si funciona o no el botón. 
-    barras.forEach(child =>   
+navTogglerBtn.addEventListener("click", () =>
     {
-    child.classList.toggle("animated");
+         headerSectionTogglerBtn()
+    })     
+function headerSectionTogglerBtn()
+{   
+    header.classList.toggle("active");
+    barras.forEach(child =>
+    {
+        child.classList.toggle("animated");
     });
-});
+}
 
 /* =================== CONTACT ============================= */
 
