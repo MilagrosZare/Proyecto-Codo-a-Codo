@@ -346,11 +346,9 @@ h2.my-profession {
 .home .home-img img
 {
     margin-left: auto;
-    border-radius: 5px;
-    height: 350px;
     border: 0.5rem solid var(--skin-color);
     border-radius: 50%;
-    width: 380px;
+    width: 380;
     height: 380px;
 }
 
