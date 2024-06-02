@@ -41,43 +41,21 @@
                     <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
                     <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
                     <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
-                    <button id="abrirModal">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i>
-                    </button>
                 </ul>
+                <!-- ===== BOTON LOGIN ===== -->
+                <button id="abrirModal">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </button>
                 <!-- ===== MENÚ HAMBURGUESA ===== -->
                 <button class="ham" id="header-section-toggler-btn">
                     <span class="br-1"></span>
                     <span class="br-2"></span>
                     <span class="br-3"></span>
                 </button>
+            </nav>
         </div>
-
-        <!-- ===== FORMULARIO LOGIN ===== -->
-        <dialog id="ventanaModal" class="modal">
-
-            <form class="modal-content animate" id="modal-content" action="" method="dialog">
-
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
-                    
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-                </div>
-
-                <div class="container">
-                    <button type="submit" class="btn" id="btn-login">Login</button>
-                    <button type="button" class="btn" id="btn-cerrar">Cerrar</button>
-                </div>
-
-            </form>
-        </div>
-        <!-- ===== FORMULARIO LOGIN FIN===== -->
-        
-        </nav>
-        <!-- ===== HEADER END ====== -->
     </header>
+    <!-- ===== HEADER END ====== -->
     <!-- ===== MAIN CONTAINER START ===== -->
     <div class="main-container">
         <!-- ===== MAIN CONTENT START ===== -->
@@ -703,6 +681,28 @@
         </div>
     </div>
     <!-- ===== CAMBIADOR DE STILO FIN ===== -->
+
+     <!-- ===== FORMULARIO LOGIN ===== -->
+     <dialog id="ventanaModal" class="modal">
+
+        <form class="modal-content animate" id="modal-content" action="" method="dialog">
+            <button type="button" class="btn-cerrar" id="btn-cerrar">X</button>
+            <div class="container-modal">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+            </div>
+
+            <div class="container-modal">
+                <button type="submit" class="btn-modal" id="btn-login">Login</button>
+                
+            </div>
+
+        </form>
+     </dialog>
+    <!-- ===== FORMULARIO LOGIN FIN===== -->
 
     <!-- ===== JS FILES ====== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"

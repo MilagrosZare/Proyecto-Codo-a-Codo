@@ -88,7 +88,9 @@
         height: 320px;
         
     }
-
+    .header-nav .ham {
+        right: 60px;
+    }
 /*     ****** LOGO ****** */
     .header-nav .logo a  {
         font-size: 35px;
@@ -157,6 +159,10 @@
         top: 35%;
         position: absolute;
     }
+    /* L O G I N */
+    #abrirModal {
+        top: 28px;
+    }
 }
 
 /* ****** MOBILE ****** */
@@ -196,7 +202,7 @@
         display: block;
         position: absolute;
         top: 15px;
-        right: 25px;
+        right: 60px;
     }
 /*  ****** LOGO ****** */
     .header-nav .logo a  {
@@ -278,5 +284,9 @@
         display: inline;
         left: 0;
         bottom: 0;
-    }            
+    }   
+    /* L O G I N */
+    #abrirModal {
+        top: 28px;
+    }
 }
