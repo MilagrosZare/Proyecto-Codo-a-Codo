@@ -164,18 +164,26 @@
     .about .about-content .skill,
     .about .about-content .personal-info,
     .home .home-img,
-    .home .home-info
-    {
+    .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .home .home-img {
-         margin-inline: auto; 
+
+    #home {
+        text-align: center;
+        
     }
+
+    .home .home-img {
+    margin-inline: auto; 
+        padding-top: 50px;
+    }
+
     .home .home-img img {
         width: 300px;
-        height: 300px;
+        height: 300px;    
     }
+
     .header-nav .ham {
         display: block;
         position: absolute;
