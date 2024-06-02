@@ -232,3 +232,16 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+/* ================================= LOGIN ================================= */ 
+const boton = document.getElementById("abrirModal");
+const modal = document.getElementById("ventanaModal");
+const btnCerrar = document.getElementById("btn-cerrar");
+
+boton.addEventListener ("click", ()=> {
+    modal.showModal();
+});
+
+btnCerrar.addEventListener ("click", ()=> {
+    modal.close();
+});

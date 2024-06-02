@@ -47,6 +47,14 @@
     .footer .copyright {
         margin-left: 200px;
     }
+
+    /* L O G I N */
+    .modal {
+            left: 50px;
+            width: 80%;
+            height: 80%;
+        }
+
 }
 
 /* ****** TABLET ****** */
