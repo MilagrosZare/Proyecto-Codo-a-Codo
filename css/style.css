@@ -813,7 +813,6 @@ h2.my-profession {
     content: '';
     inset: 0;
     background: linear-gradient(180deg, transparent, var(--skin-color));
-    position: absolute;
     opacity: 0;
 }
 
@@ -831,8 +830,7 @@ h2.my-profession {
     color: var(--bg-black-900)
 }
 
-.portfolio__subtitle,
-.portfolio__description {
+.portfolio__subtitle{
     color: var(--bg-black-100);
     opacity: 0.7;
 }
@@ -846,11 +844,6 @@ h2.my-profession {
     font-size: var(--h2-font-size);
     font-weight: var(--weight-600);
     margin-bottom: 0.75rem;
-}
-
-.portfolio__description {
-    font-weight: var(--weight-400);
-    display: none;
 }
 
 /* === Work hover === */

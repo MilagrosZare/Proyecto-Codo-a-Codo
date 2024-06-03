@@ -50,6 +50,10 @@
         margin-left: 0;
     }
 
+    .portfolio__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .form-group .comunicacion {
         height: 50px;
     }
@@ -71,7 +75,7 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 
     .home .home-info .home .home-img .contact .contact-info-item,
-    .portfolio .portfolio-item,
+    .portfolio .portfolio__item,
     .service .service-item {
         flex: 0 0 50%;
         max-width: 50%;
@@ -170,6 +174,10 @@
         height: 90px;
     }
 
+    .portfolio__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .footer {
         display: block;
         justify-content: flex-start;
@@ -194,13 +202,12 @@
     }
 }
 
-/* ****** MOBILE ****** */
+/* ****** MOBILES ****** */
 @media (max-width:767px) {
 
     .footer .nav,
     .contact .contact.form .col-6,
     .contact .contact-info-item,
-    .portfolio .portfolio-item,
     .service .service-item,
     .about .about-content .experiencia,
     .about .about-content .educacion,
@@ -210,6 +217,14 @@
     .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .portfolio .portfolio__item{
+        flex: 0 0 70%;
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     #home {
@@ -295,6 +310,10 @@
         transform: rotate(45deg) translate(-9px, -6px);
     }
 
+    .portfolio__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .form-group .comunicacion {
         height: 100px;
     }
@@ -323,6 +342,161 @@
         left: 0;
         bottom: 0;
         margin: 0 0 0 15%;
+    }
+
+    .footer .leyenda_footer {
+        display: inline;
+        left: 0;
+        bottom: 0;
+    }
+
+    /* L O G I N */
+    #abrirModal {
+        top: 28px;
+    }
+}
+
+@media (max-width:320px) {
+
+    .footer .nav,
+    .contact .contact.form .col-6,
+    .contact .contact-info-item,
+    .service .service-item,
+    .about .about-content .experiencia,
+    .about .about-content .educacion,
+    .about .about-content .skill,
+    .about .about-content .personal-info,
+    .home .home-img,
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio .portfolio__item{
+        flex: 0 0 80%;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    #home {
+        text-align: center;
+
+    }
+
+    .home .home-img {
+        margin-inline: auto;
+        padding-top: 50px;
+    }
+
+    .home .home-img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .header-nav .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 60px;
+    }
+
+    /*  ****** LOGO ****** */
+    .header-nav .logo a {
+        font-size: 20px;
+        left: 7px;
+    }
+
+    .header-nav .logo a span {
+        font-size: 20px;
+    }
+    
+    
+
+    .header-nav .nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 0 0 0;
+        padding: 0;
+        margin-left: 0;
+        display: none;
+        background-color: var(--bg-black-10);
+        opacity: 0;
+    }
+
+    .header-nav .nav li {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 7px;
+        margin: 10px 0;
+        font-size: 12px;
+        background-color: var(--bg-black-100);
+    }
+
+    .header-nav .nav.active {
+        display: flex;
+        animation: showMenu 350ms ease-in-out both;
+        background-color: var(--bg-black-100);
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes showMenu {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .br-1.animated {
+        transform: rotate(-45deg) translate(-6px, 4px);
+    }
+
+    .br-2.animated {
+        opacity: 0;
+    }
+
+    .br-3.animated {
+        transform: rotate(45deg) translate(-9px, -6px);
+    }
+
+    .portfolio__container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group .comunicacion {
+        height: 100px;
+    }
+
+    .form-group .comunicacion .check {
+        display: inline;
+    }
+
+    .form-group .comunicacion input[type="checkbox"] {
+        display: inline;
+    }
+
+    /* ****** FOOTER ****** */
+    .footer {
+        display: inline;
+        height: 20vh;
+    }
+
+    .footer .nav {
+        margin: 0;
+        top: 0;
+    }
+
+    .footer .copyright {
+        display: inline;
+        left: 0;
+        bottom: 0;
+        margin: 0;
     }
 
     .footer .leyenda_footer {
