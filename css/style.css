@@ -289,6 +289,16 @@ input[type=password] {
     }
 }
 
+.invalid-input {
+    border: solid 1px red;
+    box-shadow: 0 0 10px var(--skin-color);
+}
+
+.error-input {
+    color: red;
+    display: block;
+}
+
 /* *** END LOGIN *** */
 
 /* ****** SECTION ******** */
