@@ -216,7 +216,7 @@ input[type=password] {
     transition: all 0.3s ease;
 }
 
-.btn-cerrar{
+.btn-cerrar {
     height: 30px;
     width: 30px;
     font-size: 16px;
@@ -242,8 +242,8 @@ input[type=password] {
 }
 
 .modal {
-/*  display: none; */
-    position:fixed;
+    /*  display: none; */
+    position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
@@ -252,8 +252,8 @@ input[type=password] {
     margin: auto;
 }
 
-.modal::backdrop{
-    background-color: rgba (0,0,0,55);
+.modal::backdrop {
+    background-color: rgba (0, 0, 0, 55);
 }
 
 .modal-content {
