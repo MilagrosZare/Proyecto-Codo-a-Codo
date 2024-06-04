@@ -411,8 +411,6 @@
         font-size: 20px;
     }
     
-    
-
     .header-nav .nav {
         flex-direction: column;
         justify-content: space-around;
@@ -430,9 +428,17 @@
         position: relative;
         text-align: center;
         padding: 7px;
-        margin: 10px 0;
+        margin: 0;
         font-size: 12px;
         background-color: var(--bg-black-100);
+    }
+
+    .header-nav .nav li a.active {
+        padding: 0;
+    }
+    
+    .header-nav .nav li a i {
+        margin-right: 0;
     }
 
     .header-nav .nav.active {
@@ -465,12 +471,17 @@
         transform: rotate(45deg) translate(-9px, -6px);
     }
 
+    .about .about-content .skills .skill-item .skill-percent {
+        top: 0px;
+    }
+
     .portfolio__container {
         grid-template-columns: 1fr;
     }
 
     .form-group .comunicacion {
-        height: 100px;
+        height: 200px;
+        width: 150px;
     }
 
     .form-group .comunicacion .check {
@@ -481,29 +492,48 @@
         display: inline;
     }
 
-    /* ****** FOOTER ****** */
+    /******* FOOTER *******/ 
     .footer {
-        display: inline;
-        height: 20vh;
+        width: 320px;
+        height: 60px;
     }
 
+    .footer footer{
+        width: 320px;
+        height: 55px;
+    }
+    
     .footer .nav {
-        margin: 0;
-        top: 0;
-    }
-
-    .footer .copyright {
-        display: inline;
+        position: absolute;
+        top: 3px;
         left: 0;
-        bottom: 0;
-        margin: 0;
+        row-gap: 1.5rem;
+        padding: 0;
     }
-
+    
+    .footer .nav li a {
+        padding: 5px;
+    }
+    
+   .footer .nav li a i {
+        margin: 0 10px;
+    }
+    
+    .footer .nav li a i:hover {
+        transform: scale(1.25);
+    }
+    
+    .footer .copyright small{
+        justify-self: center;
+        position: absolute; 
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    
     .footer .leyenda_footer {
-        display: inline;
-        left: 0;
-        bottom: 0;
+        display: none;
     }
+    
 
     /* L O G I N */
     #abrirModal {
